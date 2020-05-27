@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - alSafzi</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="bg-green-100 text-base">
+    <div class=" flex justify-center items-center">
+        <div class="container bg-white min-h-screen p-10">
+            <header class="mb-5 z-50 flex justify-around  bg-green-400 rounded py-5 shadow-md">
+                <h1 class="text-white font-bold text-lg tracking-wider"><i class="fas fa-smile"></i> Chat alSafzi</h1>
+                <a href="index.html"
+                    class="btn bg-white text-green-400 py-2 px-2 rounded-sm hover:bg-green-100 rounded-md">Leave
+                    Room</a>
+            </header>
+            <main class="mb-10 flex h-main">
+                <div class="flex-none bg-green-400 p-5 rounded-md w-1/5">
+                    <h3 class="text-white font-bold"><i class="fas fa-comments"></i> Room Name :</h3>
+                    <h2 class="ml-3 mb-5 bg-white text-black rounded-full w-1/2 text-center" id="room-name">
+                    </h2>
+                    <h3 class="text-white font-bold"><i class="fas fa-users"></i> Users</h3>
+                    <ul class="text-black" id="users">
+                    </ul>
+                </div>
+                <div class="chat-messages flex-1 ml-3 bg-green-100 rounded-md p-5">
+                </div>
+            </main>
+            <form id="chat-form" class="flex justify-around">
+                <input class="shadow rounded px-2 mr-2 w-full text-gray-700 focus:outline-none focus:shadow-outline"
+                    id="msg" type="text" placeholder="Enter Message" required autocomplete="off" autofocus />
+                <button class="btn bg-green-400 text-white py-2 px-2 w-40 rounded-md hover:bg-green-500 rounded-md "><i
+                        class="fas fa-paper-plane"></i> Send</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+        integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4=" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

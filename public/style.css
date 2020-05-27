@@ -1,0 +1,18 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+   font-family: 'Quicksand', sans-serif;
+}
+
+.h-main{
+    height: 40rem;
+}
+
+.chat-messages{
+    height: 40rem;
+    overflow-y: scroll;
+}

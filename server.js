@@ -14,7 +14,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
-app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 const botName = 'alSafzi Chat Bot';
@@ -70,5 +70,5 @@ io.on('connection', socket => {
     });
 });
 
-const PORT = 3000 || process.env.PORT;
+const PORT = process.env.PORT || 4000;
 server.listen(PORT, console.log(`Server run on localhost:${PORT}`));
